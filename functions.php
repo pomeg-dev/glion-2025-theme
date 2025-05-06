@@ -4,7 +4,7 @@
 // ** UPDATE CHECKER **
 //------------------------------------------------
 
-require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
+require_once get_template_directory() . '/includes/plugin-update-checker/plugin-update-checker.php';
 function theme_setup_updater() {
     if (!is_admin()) {
         return;
