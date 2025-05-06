@@ -1,0 +1,69 @@
+{
+	"version": 2,
+	"settings": {
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
+          "slug": "helvetica-arial",
+          "name": "Helvetica or Arial"
+        }
+      ]
+    },
+		"color": {
+			"background": true,
+			"custom": true,
+			"customDuotone": true,
+			"customGradient": true,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"palette": [
+        {
+					"color": "#ffffff",
+					"name": "White",
+					"slug": "white"
+				},
+        {
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				},
+        {
+					"color": "rgba(var(--blue-base))",
+					"name": "Primary",
+					"slug": "primary"
+				},
+        {
+					"color": "rgba(var(--blue-dark))",
+					"name": "Primary Dark",
+					"slug": "primary-dark"
+				},
+        {
+					"color": "rgba(var(--bronze-base))",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+        {
+					"color": "rgba(var(--blue-50))",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+        {
+					"color": "rgba(var(--bronze-100))",
+					"name": "Quaternary",
+					"slug": "quaternary"
+				}
+      ],
+			"text": true
+		}
+	},
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--helvetica-arial)"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+<?php
+add_action( 'acf/include_fields', function() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+		return;
+	}
+
+	acf_add_local_field_group( array(
+	'key' => 'group_68079bb57c039',
+	'title' => 'Module Details',
+	'fields' => array(
+		array(
+			'key' => 'field_68079bb51a06c',
+			'label' => 'Description',
+			'name' => 'description',
+			'aria-label' => '',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'allow_in_bindings' => 0,
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+		array(
+			'key' => 'field_68079bc81a06d',
+			'label' => 'Type',
+			'name' => 'type',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'allow_in_bindings' => 0,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_68079bf7b8a49',
+			'label' => 'ECT Credits',
+			'name' => 'ect_credits',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'allow_in_bindings' => 0,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_68079bffb8a4a',
+			'label' => 'US Credits',
+			'name' => 'us_credits',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'allow_in_bindings' => 0,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'module',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+) );
+} );
+

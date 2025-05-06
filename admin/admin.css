@@ -1,0 +1,4 @@
+.editor-styles-wrapper,
+.is-root-container > .wp-block {
+  padding: 1rem;
+}
