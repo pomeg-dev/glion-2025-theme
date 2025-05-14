@@ -43,6 +43,16 @@ function remove_comments_menu() {
 }
 add_action( 'admin_menu', 'remove_comments_menu' );
 
+function trim_excerpt( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'trim_excerpt', 999 );
+
+function amend_excerpt_more( $more ) {
+    return '&hellip;';
+}
+add_filter( 'excerpt_more', 'amend_excerpt_more' );
+
 //------------------------------------------------
 // ** TAXONOMIES **
 //------------------------------------------------
@@ -67,6 +77,26 @@ function create_event_type_taxonomy()
 }
 add_action('init', 'create_event_type_taxonomy');
 
+// Add custom taxonomy 'blog_type'
+function create_blog_type_taxonomy()
+{
+    register_taxonomy(
+        'blog_type',
+        [ 'post' ],
+        [
+            'labels' => [
+                'name' => __('Blog Types', 'nextpress'),
+                'singular_name' => __('Blog Type', 'nextpress')
+            ],
+            'hierarchical' => true,
+            'show_in_rest' => true,
+            'public' => true,
+            'show_admin_column' => true
+        ]
+    );
+}
+add_action('init', 'create_blog_type_taxonomy');
+
 // Add custom taxonomy 'program_type'
 function create_program_type_taxonomy()
 {
@@ -86,6 +116,46 @@ function create_program_type_taxonomy()
     );
 }
 add_action('init', 'create_program_type_taxonomy');
+
+// Add custom taxonomy 'persona'
+function create_program_type_taxonomy()
+{
+    register_taxonomy(
+        'persona',
+        [ 'post' ],
+        [
+            'labels' => [
+                'name' => __('Personas', 'nextpress'),
+                'singular_name' => __('Persona', 'nextpress')
+            ],
+            'hierarchical' => true,
+            'show_in_rest' => true,
+            'public' => true,
+            'show_admin_column' => true
+        ]
+    );
+}
+add_action('init', 'create_persona_taxonomy');
+
+// Add custom taxonomy 'theme'
+function create_theme_taxonomy()
+{
+    register_taxonomy(
+        'theme',
+        [ 'post' ],
+        [
+            'labels' => [
+                'name' => __('Themes', 'nextpress'),
+                'singular_name' => __('Theme', 'nextpress')
+            ],
+            'hierarchical' => true,
+            'show_in_rest' => true,
+            'public' => true,
+            'show_admin_column' => true
+        ]
+    );
+}
+add_action('init', 'create_theme_taxonomy');
 
 // Add custom taxonomy 'department'
 function create_department_taxonomy()
@@ -135,8 +205,8 @@ function create_testimonial_type_taxonomy()
         [ 'testimonial' ],
         [
             'labels' => [
-                'name' => __('Types', 'nextpress'),
-                'singular_name' => __('Type', 'nextpress')
+                'name' => __('Testimonial Types', 'nextpress'),
+                'singular_name' => __('Testimonial Type', 'nextpress')
             ],
             'hierarchical' => true,
             'show_in_rest' => true,
