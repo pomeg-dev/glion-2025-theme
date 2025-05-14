@@ -118,7 +118,7 @@ function create_program_type_taxonomy()
 add_action('init', 'create_program_type_taxonomy');
 
 // Add custom taxonomy 'persona'
-function create_program_type_taxonomy()
+function create_persona_taxonomy()
 {
     register_taxonomy(
         'persona',
