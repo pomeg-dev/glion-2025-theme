@@ -3,6 +3,8 @@
 /* COLOUR VARIABLES */
 --blue-base-rgb: 36 54 70;
 --blue-base: 36, 54, 70, 1;
+--blue-base-rgb: 36 54 70;
+--blue-base: 36, 54, 70, 1;
 --blue-dark: 19, 37, 53, 1;
 --bronze-base-rgb: 158 120 91;
 --bronze-base: 158, 120, 91, 1;
@@ -87,8 +89,6 @@
 --utility-green-50: 232, 241, 233, 1;
 --utility-green-25: 239, 243, 240, 1;
 --utility-green-10: 242, 244, 242, 1;
---blue-base-rgb: 36 54 70;
---blue-base: 36, 54, 70, 1;
 
 /* BODY COPY VARIABLES */
 --body-lg: 17px;
